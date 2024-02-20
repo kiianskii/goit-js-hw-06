@@ -18,11 +18,11 @@ class Storage {
         return this.#items
     }
     addItem(newItem) {
-        return this.#items.push(newItem)
+        this.#items.push(newItem)
     }
     removeItem(itemToRemove) {
-        const ind = this.#items.indexOf(itemToRemove)
-        return this.#items.splice(ind, 1)
+        
+        this.#items = this.#items.filter(el => el !== itemToRemove)
     }
 }
 
